@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "UserID": "USER01",
+      "UserName": "Bùi Đình Đài",
+      "Birthday": "05/08/1995",
+      "Gender": "Male",
+      "Email": "buidinhdai@gmail.com",
+      "Phone": "0968247623",
+      "IDNumber": "1634522394",
+      "Address": "Đông Hưng, Thái Bình, Việt Nam",
+      "Guardian": "Bùi Đình Đạt"
+    },
+    {
+      "UserID": "USER02",
+      "UserName": "Nguyễn Trung Hiếu",
+      "Birthday": "15/03/1995",
+      "Gender": "Male",
+      "Email": "nguyentrunghieu@gmail.com",
+      "Phone": "0338947535",
+      "IDNumber": "1553729834",
+      "Address": "Kiến Xương, Thái Bình, Việt Nam",
+      "Guardian": "Nguyễn Trung Quang"
+    },
+    {
+      "UserID": "USER03",
+      "UserName": "Nguyễn Thị Loan",
+      "Birthday": "05/05/1995",
+      "Gender": "Female",
+      "Email": "nguyenthiloan@gmail.com",
+      "Phone": "0965489753",
+      "IDNumber": "1586735334",
+      "Address": "Thanh Xuân, Hà Nội, Việt Nam",
+      "Guardian": "Nguyễn Thị Thanh Vân"
+    },
+    {
+      "UserID": "USER04",
+      "UserName": "Đoàn Thị Linh",
+      "Birthday": "16/02/1995",
+      "Gender": "Female",
+      "Email": "doanthilinh@gmail.com",
+      "Phone": "088923865",
+      "IDNumber": "1984623944",
+      "Address": "Thanh Miện, Hải Dương, Việt Nam",
+      "Guardian": "Đàm Đình Đạt"
+    }
+  ]
+}

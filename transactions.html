@@ -1,0 +1,615 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Jumbo - A fully responsive, HTML5 based admin theme">
+    <meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, jQuery, web design, CSS3, sass">
+    <title>Transactions Management</title>
+    <!-- Site favicon -->
+    <link rel='shortcut icon' type='image/x-icon' href='images/iconES.png' />
+    <!-- /site favicon -->
+
+    <!-- Font Material stylesheet -->
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <!-- /font material stylesheet -->
+
+    <!-- Font Awesome stylesheet -->
+    <link rel="stylesheet" href="fonts/fontawesome-pro-5.13.0-web/css/all.min.css">
+    <!-- /font awesome stylesheet -->
+
+    <!-- Perfect Scrollbar stylesheet -->
+    <link href="vendor/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <!-- /perfect scrollbar stylesheet -->
+
+    <!-- Bootstrap stylesheet -->
+    <link href="css/jumbo-bootstrap.css" rel="stylesheet">
+    <!-- /bootstrap stylesheet -->
+
+    <!-- Datepicker Bootstrap stylesheet -->
+    <link rel="stylesheet" href="vendor/bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <!-- /datepicker bootstrap stylesheet -->
+
+    <!-- ColorPicker Bootstrap stylesheet -->
+    <link href="vendor/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <!-- /colorpicker bootstrap stylesheet -->
+
+    <!-- Select2 stylesheet -->
+    <link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- /select2 stylesheet -->
+
+    <!-- Nouislider stylesheet -->
+    <link href="vendor/nouislider/distribute/nouislider.min.css" rel="stylesheet">
+    <!-- /nouislider stylesheet -->
+
+    <!-- Jumbo form stylesheet -->
+    <link href="css/jumbo-forms.css" rel="stylesheet">
+    <!-- /jumbo form stylesheet -->
+
+    <!-- Jumbo-core stylesheet -->
+    <link href="css/jumbo-core.min.css" rel="stylesheet">
+    <!-- /jumbo-core stylesheet -->
+
+    <!-- Color-Theme stylesheet -->
+    <link id="override-css-id" href="css/theme-ESgame.min.css" rel="stylesheet">
+    <!-- Color-Theme stylesheet -->
+
+    <!-- Customise -->
+    <link href="customise/css/customise.css" rel="stylesheet">
+    <!-- Customise -->
+</head>
+
+<body id="body" data-theme="dark-indigo" class="theme-esgame">
+
+<!-- Loader Backdrop -->
+<div class="loader-backdrop">
+    <!-- Loader -->
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+        </svg>
+    </div>
+    <!-- /loader-->
+</div>
+<!-- loader backdrop -->
+
+<!-- Page container -->
+<div class="gx-container">
+
+    <!-- Page Sidebar -->
+    <div id="menu" class="side-nav gx-sidebar">
+        <div class="navbar-expand-lg">
+            <!-- Sidebar header  -->
+            <div class="sidebar-header">
+                <div class="user-profile">
+                    <img class="user-avatar" alt="Domnic" src="images/userAvatar/domnic-harris.jpg">
+
+                    <div class="user-detail">
+                        <h4 class="user-name">
+                            <span class="dropdown">
+                                <a class="dropdown-toggle" href="#" role="button" id="userAccount"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Robert Johnson
+                                </a>
+
+                                <span class="dropdown-menu dropdown-menu-right" aria-labelledby="userAccount">
+                                    <a class="dropdown-item" href="javascript:void(0)">
+                                        <i class="zmdi zmdi-account zmdi-hc-fw mr-2"></i>
+                                        Profile
+                                    </a>
+                                    <a class="dropdown-item" href="javascript:void(0)">
+                                        <i class="zmdi zmdi-settings zmdi-hc-fw mr-2"></i>
+                                        Setting
+                                    </a>
+                                    <a class="dropdown-item" href="javascript:void(0)">
+                                        <i class="zmdi zmdi-sign-in zmdi-hc-fw mr-2"></i>
+                                        Logout
+                                    </a>
+                                </span>
+                            </span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <!-- /sidebar header -->
+
+            <!-- Main navigation -->
+            <div id="main-menu" class="main-menu navbar-collapse collapse">
+                <ul class="nav-menu">
+                    <li class="nav-header"><span class="nav-text">Menu</span></li>
+                    <li class="menu no-arrow">
+                        <a href="users.html">
+                            <i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>
+                            <span class="nav-text">Users</span>
+                        </a>
+                    </li>
+                    <li class="menu no-arrow open selected">
+                        <a href="transactions.html">
+                            <i class="zmdi zmdi-card zmdi-hc-fw"></i>
+                            <span class="nav-text">Transactions</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /main navigation -->
+        </div>
+    </div>
+    <!-- /page sidebar -->
+
+    <!-- Main Container -->
+    <div class="gx-main-container">
+
+        <!-- Main Header -->
+        <header class="main-header">
+            <div class="gx-toolbar">
+                <div class="sidebar-mobile-menu d-block d-lg-none">
+                    <a class="gx-menu-icon menu-toggle" href="#menu">
+                        <span class="menu-icon"></span>
+                    </a>
+                </div>
+
+                <a class="site-logo" href="index.html">
+                    <img src="images/logo.png" alt="ES Game" title="ES Game">
+                </a>
+
+                <ul class="quick-menu header-notifications ml-auto">
+
+                    <li class="nav-searchbox dropdown d-inline-block d-sm-none">
+                        <a href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" class="d-inline-block icon-btn" aria-expanded="false">
+                            <i class="zmdi zmdi-search zmdi-hc-fw"></i>
+                        </a>
+                        <div aria-hidden="true" class="p-0 dropdown-menu dropdown-menu-right search-bar right-side-icon search-dropdown">
+                            <div class="form-group">
+                                <input class="form-control border-0" placeholder="" value="" type="search">
+                                <button class="search-icon"><i class="zmdi zmdi-search zmdi-hc-lg"></i></button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" class="d-inline-block" aria-expanded="true">
+                            <i class="zmdi zmdi-notifications-active icons-alert animated infinite wobble"></i>
+                        </a>
+
+                        <div role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                            <div class="gx-card-header d-flex align-items-center">
+                                <div class="mr-auto">
+                                    <h3 class="card-heading">Notifications</h3>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-menu-perfectscrollbar">
+                                <div class="messages-list">
+                                    <ul class="list-unstyled">
+                                        <li class="media">
+                                            <img alt="stella-johnson" src="images/userAvatar/stella-johnson.jpg"
+                                                 class="size-40 mr-2 rounded-circle">
+                                            <div class="media-body align-self-center">
+                                                <p class="sub-heading mb-0">Stella Johnson has recently posted an
+                                                    album</p>
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs mb-0">
+                                                    <i class="zmdi zmdi-thumb-up text-blue zmdi-hc-fw"></i>
+                                                </a>
+                                                <span class="meta-date"><small>4:10 PM</small></span>
+                                            </div>
+                                        </li>
+
+                                        <li class="media">
+                                            <img alt="domnic-harris" src="images/userAvatar/domnic-harris.jpg"
+                                                 class="size-40 mr-2 rounded-circle">
+                                            <div class="media-body align-self-center">
+                                                <p class="sub-heading mb-0">Alex Brown has shared Martin Guptil's
+                                                    post</p>
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs mb-0">
+                                                    <i class="zmdi zmdi-comment-text text-grey zmdi-hc-fw"></i>
+                                                </a>
+                                                <span class="meta-date"><small>5:18 PM</small></span>
+                                            </div>
+                                        </li>
+
+                                        <li class="media">
+                                            <img alt="domnic-brown" src="images/userAvatar/domnic-brown.jpg"
+                                                 class="size-40 mr-2 rounded-circle">
+                                            <div class="media-body align-self-center">
+                                                <p class="sub-heading mb-0">Domnic Brown has sent you a group invitation
+                                                    for Global Health</p>
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs mb-0">
+                                                    <i class="zmdi zmdi-card-giftcard text-info zmdi-hc-fw"></i>
+                                                </a>
+                                                <span class="meta-date"><small>5:36 PM</small></span>
+                                            </div>
+                                        </li>
+
+                                        <li class="media">
+                                            <img alt="john-smith" src="images/userAvatar/john-smith.jpg"
+                                                 class="size-40 mr-2 rounded-circle">
+                                            <div class="media-body align-self-center">
+                                                <p class="sub-heading mb-0">John Smith has birthday today</p>
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs mb-0">
+                                                    <i class="zmdi zmdi-cake text-warning zmdi-hc-fw"></i>
+                                                </a>
+                                                <span class="meta-date"><small>5:54 PM</small></span>
+                                            </div>
+                                        </li>
+
+                                        <li class="media">
+                                            <img alt="jimmy-jo" src="images/userAvatar/jimmy-jo.jpg"
+                                                 class="size-40 mr-2 rounded-circle">
+                                            <div class="media-body align-self-center">
+                                                <p class="sub-heading mb-0">Chris has updated his profile picture</p>
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs mb-0">
+                                                    <i class="zmdi zmdi-account-box-o text-grey zmdi-hc-fw"></i>
+                                                </a>
+                                                <span class="meta-date"><small>5:25 PM</small></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" class="d-inline-block" aria-expanded="true">
+                            <i class="zmdi zmdi-comment-alt-text icons-alert zmdi-hc-fw"></i>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" data-placement="bottom-end" data-x-out-of-boundaries="">
+                            <div class="gx-card-header d-flex align-items-center">
+                                <div class="mr-auto">
+                                    <h3 class="card-heading">Messages</h3>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-menu-perfectscrollbar1">
+                                <div class="messages-list">
+                                    <ul class="list-unstyled">
+                                        <li class="media">
+                                            <div class="user-thumb">
+                                                <img alt="Domnic Brown" src="images/userAvatar/domnic-brown.jpg"
+                                                     class="rounded-circle size-40 user-avatar">
+                                                <span class="badge badge-danger rounded-circle">5</span>
+                                            </div>
+
+                                            <div class="media-body">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h5 class="text-capitalize user-name mb-0">
+                                                        <a href="javascript:void(0)">Domnic Brown</a>
+                                                    </h5>
+                                                    <span class="meta-date"><small>6:19 PM</small></span>
+                                                </div>
+                                                <p class="sub-heading">There are many variations of passages of...</p>
+
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs text-muted">
+                                                    <i class="zmdi zmdi-mail-reply"></i>
+                                                    <span>Reply</span>
+                                                </a>
+
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs text-muted">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                    <span>Read</span>
+                                                </a>
+                                            </div>
+                                        </li>
+
+                                        <li class="media">
+                                            <div class="user-thumb">
+                                                <img alt="John Smith" src="images/userAvatar/jimmy-jo.jpg" class="rounded-circle size-40 user-avatar">
+                                                <span class="badge badge-danger rounded-circle"></span>
+                                            </div>
+
+                                            <div class="media-body">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h5 class="text-capitalize user-name mb-0">
+                                                        <a href="javascript:void(0)">John Smith</a>
+                                                    </h5>
+                                                    <span class="meta-date"><small>4:18 PM</small></span>
+                                                </div>
+                                                <p class="sub-heading">Lorem Ipsum is simply dummy text of the...</p>
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs text-muted">
+                                                    <i class="zmdi zmdi-mail-reply"></i>
+                                                    <span>Reply</span>
+                                                </a>
+
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs text-muted">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                    <span>Read</span>
+                                                </a>
+                                            </div>
+                                        </li>
+
+                                        <li class="media">
+                                            <div class="user-thumb">
+                                                <img alt="John Smith" src="images/userAvatar/john-smith.jpg"
+                                                     class="size-40 rounded-circle user-avatar">
+                                                <span class="badge badge-danger rounded-circle">8</span>
+                                            </div>
+
+                                            <div class="media-body">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h5 class="text-capitalize user-name mb-0">
+                                                        <a href="javascript:void(0)">John Smith</a>
+                                                    </h5>
+                                                    <span class="meta-date"><small>7:10 PM</small></span>
+                                                </div>
+                                                <p class="sub-heading">The point of using Lorem Ipsum is that it
+                                                    has...</p>
+
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs text-muted">
+                                                    <i class="zmdi zmdi-mail-reply"></i>
+                                                    <span>Reply</span>
+                                                </a>
+
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs text-muted">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                    <span>Read</span>
+                                                </a>
+                                            </div>
+                                        </li>
+
+                                        <li class="media">
+                                            <div class="user-thumb">
+                                                <img alt="alex dolgove" src="images/userAvatar/alex-dolgove.jpg"
+                                                     class="size-40 rounded-circle user-avatar">
+                                                <span class="badge badge-danger rounded-circle"></span>
+                                            </div>
+
+                                            <div class="media-body">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h5 class="text-capitalize user-name mb-0">
+                                                        <a href="javascript:void(0)">alex dolgove</a>
+                                                    </h5>
+                                                    <span class="meta-date"><small>5:10 PM</small></span>
+                                                </div>
+                                                <p class="sub-heading">It is a long established fact that a reader
+                                                    will...</p>
+
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs text-muted">
+                                                    <i class="zmdi zmdi-mail-reply"></i>
+                                                    <span>Reply</span>
+                                                </a>
+
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs text-muted">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                    <span>Read</span>
+                                                </a>
+                                            </div>
+
+                                        </li>
+
+                                        <li class="media">
+                                            <div class="user-thumb">
+                                                <img alt="Domnic Harris" src="images/userAvatar/domnic-harris.jpg" class="size-40 rounded-circle user-avatar">
+
+                                                <span class="badge badge-danger rounded-circle">3</span>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h5 class="text-capitalize user-name mb-0">
+                                                        <a href="javascript:void(0)">Domnic Harris</a>
+                                                    </h5>
+                                                    <span class="meta-date"><small>7:35 PM</small></span>
+                                                </div>
+                                                <p class="sub-heading">All the Lorem Ipsum generators on the...</p>
+
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs text-muted">
+                                                    <i class="zmdi zmdi-mail-reply"></i>
+                                                    <span>Reply</span>
+                                                </a>
+
+                                                <a href="javascript:void(0)" class="gx-btn gx-flat-btn gx-btn-xs text-muted">
+                                                    <i class="zmdi zmdi-eye"></i>
+                                                    <span>Read</span>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- /main header -->
+
+        <!-- Main Content -->
+
+        <div class="gx-main-content">
+            <!--gx-wrapper-->
+            <div class="gx-wrapper">
+
+                <div class="animated slideInUpTiny animation-duration-3">
+
+                    <div class="page-heading d-sm-flex justify-content-sm-between align-items-sm-center">
+                        <h2 class="title mb-3 mb-sm-0">Users management</h2>
+                        <nav class="mb-0 breadcrumb">
+                            <a href="index.html" class="breadcrumb-item">Dashboard</a>
+                            <span class="active breadcrumb-item">Quản lý thành viên</span>
+                        </nav>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="gx-card pb-1">
+                                <h3>Filter <i class="fas fa-filter"></i></h3>
+                                <form action="" class="form-filter">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Search by User ID">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Search by User Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select
+                                                        name="searchByStatus"
+                                                        class="select2-hide-search form-control form-control-lg"
+                                                        data-placeholder="Search By Status"
+                                                >
+                                                    <option></option>
+                                                    <option value="1">Active</option>
+                                                    <option value="2">Inactive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select
+                                                        name="searchByGame"
+                                                        class="select2 form-control form-control-lg"
+                                                        data-placeholder="Search By Game"
+                                                >
+                                                    <option></option>
+                                                    <option value="1">Giang Hồ Bùm Chíu</option>
+                                                    <option value="2">Đại Hiệp Piu Piu Piu</option>
+                                                    <option value="3">Hải tặc chiến</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 col-lg-7 col-xl-5">
+                                            <div class="form-group d-flex align-items-center">
+                                                <div class='datetimepicker1 input-group date'>
+                                                    <input type='text' class="form-control" title="" placeholder="Time ranges from"/>
+                                                    <span class="input-group-addon">
+                                                        <i class="zmdi zmdi-calendar"></i>
+                                                    </span>
+                                                </div>
+                                                <i class="fal fa-long-arrow-right mx-1"></i>
+                                                <div class='datetimepicker1 input-group date'>
+                                                    <input type='text' class="form-control" title="" placeholder="Time ranges to"/>
+                                                    <span class="input-group-addon">
+                                                        <i class="zmdi zmdi-calendar"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 col-lg-5 col-xl-4">
+                                            <div class="form-group d-flex align-items-center">
+                                                <input type="number" class="form-control" placeholder="Amount from">
+                                                <i class="fal fa-long-arrow-right mx-1"></i>
+                                                <input type="number" class="form-control" placeholder="Amount to">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary w-100">Filter results</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="gx-card">
+                                <div class="gx-card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered table-hover nowrap">
+                                            <thead>
+                                            <tr>
+                                                <th>Transaction ID</th>
+                                                <th>User Name</th>
+                                                <th>User ID</th>
+                                                <th>Money</th>
+                                                <th>Status</th>
+                                                <th>Time</th>
+                                                <th>Game</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="data-transactions">
+                                            </tbody>
+                                            <tfoot>
+                                            <tr>
+                                                <th>Transaction ID</th>
+                                                <th>User Name</th>
+                                                <th>User ID</th>
+                                                <th>Money</th>
+                                                <th>Status</th>
+                                                <th>Time</th>
+                                                <th>Game</th>
+                                            </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/gx-wrapper-->
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /main container -->
+
+</div>
+<!-- /page container -->
+
+<!-- Menu Backdrop -->
+<div class="menu-backdrop fade"></div>
+<!-- /menu backdrop -->
+
+
+
+<!--Load JQuery-->
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<!--Get data table-->
+<script>
+    $.getJSON( "json/transactions.json", function( data ) {
+        console.log('a');
+        let rowTransaction = data.transactions.map((animal, index, animals) => {
+            let row = '<tr>' +
+                    '<td>' + animal.TransactionID + '</td>' +
+                    '<td>' + animal.UserName + '</td>' +
+                    '<td>' + animal.UserID + '</td>' +
+                    '<td>' + animal.Money + '</td>' +
+                    '<td>' + animal.Status + '</td>' +
+                    '<td>' + animal.Time + '</td>' +
+                    '<td>' + animal.Game + '</td>' +
+                '</tr>';
+            return row;
+        });
+        let rows = '';
+        for (let i = 0; i < rowTransaction.length; i++){
+            rows = rows.concat(rowTransaction[i]);
+        }
+
+        $('.data-transactions').html(rows);
+    });
+
+</script>
+
+
+<!--Bootstrap JQuery-->
+<script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!--Perfect Scrollbar JQuery-->
+<script src="vendor/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+<!--Big Slide JQuery-->
+<script src="vendor/bigslide/dist/bigSlide.min.js"></script>
+<!--Moment JQuery-->
+<script src="vendor/moment/moment.js"></script>
+<!--Datepicker Bootstrap JQuery-->
+<script src="vendor/bootstrap4-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<!--Colorpicker Bootstrap JQuery-->
+<script src="vendor/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<!--Select2 JQuery-->
+<script src="vendor/select2/dist/js/select2.full.min.js"></script>
+<!--nouiSlider JQuery-->
+<script src="vendor/nouislider/distribute/nouislider.min.js"></script>
+
+<!--Custom JQuery-->
+<script src="js/functions.js"></script>
+<script src="js/custom/advanced-plugins.js"></script>
+
+</body>
+</html>
+

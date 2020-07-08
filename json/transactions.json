@@ -1,0 +1,31 @@
+{
+  "transactions": [
+    {
+      "TransactionID": "T001",
+      "UserName": "Bùi Đình Đài",
+      "UserID": "USER01",
+      "Money": "150.000VNĐ",
+      "Status": "Active",
+      "Time": "05/07/2020 15:05",
+      "Game": "Giang Hồ Bùm Chíu"
+    },
+    {
+      "TransactionID": "T002",
+      "UserName": "Nguyễn Trung Hiếu",
+      "UserID": "USER02",
+      "Money": "200.000VNĐ",
+      "Status": "Male",
+      "Time": "04/07/2020 12:00",
+      "Game": "Đại Hiệp Piu Piu Piu"
+    },
+    {
+      "TransactionID": "T003",
+      "UserName": "Nguyễn Thị Loan",
+      "UserID": "USER03",
+      "Money": "500.000VNĐ",
+      "Status": "Active",
+      "Time": "06/07/2020 10:00",
+      "Game": "Đại Hiệp Piu Piu Piu"
+    }
+  ]
+}
