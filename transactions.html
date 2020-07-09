@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Jumbo - A fully responsive, HTML5 based admin theme">
     <meta name="keywords" content="Responsive, HTML5, admin theme, business, professional, jQuery, web design, CSS3, sass">
-    <title>Transactions Management</title>
+    <title>Quản lý giao dịch</title>
     <!-- Site favicon -->
     <link rel='shortcut icon' type='image/x-icon' href='images/iconES.png' />
     <!-- /site favicon -->
@@ -91,21 +91,21 @@
                             <span class="dropdown">
                                 <a class="dropdown-toggle" href="#" role="button" id="userAccount"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Robert Johnson
+                                    Admin
                                 </a>
 
                                 <span class="dropdown-menu dropdown-menu-right" aria-labelledby="userAccount">
                                     <a class="dropdown-item" href="javascript:void(0)">
                                         <i class="zmdi zmdi-account zmdi-hc-fw mr-2"></i>
-                                        Profile
+                                        Thông tin cá nhân
                                     </a>
                                     <a class="dropdown-item" href="javascript:void(0)">
                                         <i class="zmdi zmdi-settings zmdi-hc-fw mr-2"></i>
-                                        Setting
+                                        Cài đặt
                                     </a>
                                     <a class="dropdown-item" href="javascript:void(0)">
                                         <i class="zmdi zmdi-sign-in zmdi-hc-fw mr-2"></i>
-                                        Logout
+                                        Đăng xuất
                                     </a>
                                 </span>
                             </span>
@@ -122,13 +122,13 @@
                     <li class="menu no-arrow">
                         <a href="users.html">
                             <i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>
-                            <span class="nav-text">Users</span>
+                            <span class="nav-text">Quản lý thành viên</span>
                         </a>
                     </li>
                     <li class="menu no-arrow open selected">
                         <a href="transactions.html">
                             <i class="zmdi zmdi-card zmdi-hc-fw"></i>
-                            <span class="nav-text">Transactions</span>
+                            <span class="nav-text">Quản lý giao dịch</span>
                         </a>
                     </li>
                 </ul>
@@ -424,9 +424,9 @@
                 <div class="animated slideInUpTiny animation-duration-3">
 
                     <div class="page-heading d-sm-flex justify-content-sm-between align-items-sm-center">
-                        <h2 class="title mb-3 mb-sm-0">Users management</h2>
+                        <h2 class="title mb-3 mb-sm-0">Quản lý giao dịch</h2>
                         <nav class="mb-0 breadcrumb">
-                            <a href="index.html" class="breadcrumb-item">Dashboard</a>
+                            <a href="index.html" class="breadcrumb-item">Bảng điều khiển</a>
                             <span class="active breadcrumb-item">Quản lý thành viên</span>
                         </nav>
                     </div>
@@ -434,38 +434,15 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="gx-card pb-1">
-                                <h3>Filter <i class="fas fa-filter"></i></h3>
+                                <h3>Bộ lọc <i class="fas fa-filter"></i></h3>
                                 <form action="" class="form-filter">
                                     <div class="row">
-                                        <div class="col-sm-6 col-md-4 col-lg-3">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Search by User ID">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-4 col-lg-3">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Search by User Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-4 col-lg-3">
-                                            <div class="form-group">
-                                                <select
-                                                        name="searchByStatus"
-                                                        class="select2-hide-search form-control form-control-lg"
-                                                        data-placeholder="Search By Status"
-                                                >
-                                                    <option></option>
-                                                    <option value="1">Active</option>
-                                                    <option value="2">Inactive</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <div class="col-md-8 col-lg-4 col-xl-3">
                                             <div class="form-group">
                                                 <select
                                                         name="searchByGame"
                                                         class="select2 form-control form-control-lg"
-                                                        data-placeholder="Search By Game"
+                                                        data-placeholder="Trò chơi"
                                                 >
                                                     <option></option>
                                                     <option value="1">Giang Hồ Bùm Chíu</option>
@@ -474,33 +451,62 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-md-8 col-lg-7 col-xl-5">
-                                            <div class="form-group d-flex align-items-center">
-                                                <div class='datetimepicker1 input-group date'>
-                                                    <input type='text' class="form-control" title="" placeholder="Time ranges from"/>
-                                                    <span class="input-group-addon">
-                                                        <i class="zmdi zmdi-calendar"></i>
-                                                    </span>
-                                                </div>
-                                                <i class="fal fa-long-arrow-right mx-1"></i>
-                                                <div class='datetimepicker1 input-group date'>
-                                                    <input type='text' class="form-control" title="" placeholder="Time ranges to"/>
-                                                    <span class="input-group-addon">
-                                                        <i class="zmdi zmdi-calendar"></i>
-                                                    </span>
-                                                </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Mã Giao dịch">
                                             </div>
                                         </div>
-                                        <div class="col-md-8 col-lg-5 col-xl-4">
-                                            <div class="form-group d-flex align-items-center">
-                                                <input type="number" class="form-control" placeholder="Amount from">
-                                                <i class="fal fa-long-arrow-right mx-1"></i>
-                                                <input type="number" class="form-control" placeholder="Amount to">
+                                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Họ tên">
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-4 col-lg-3">
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-primary w-100">Filter results</button>
+                                                <input type="text" class="form-control" placeholder="ID thành viên">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select
+                                                        name="searchByStatus"
+                                                        class="select2-hide-search form-control form-control-lg"
+                                                        data-placeholder="Trạng thái"
+                                                >
+                                                    <option></option>
+                                                    <option value="1">Thành công</option>
+                                                    <option value="2">Không thành công</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-5 col-lg-6 col-xl-4">
+                                            <div class="form-group d-flex align-items-center">
+                                                <input type="number" class="form-control" placeholder="Số tiền nhỏ nhất">
+                                                <i class="fal fa-long-arrow-right mx-1"></i>
+                                                <input type="number" class="form-control" placeholder="Số tiền cao nhất">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 col-lg-8 col-xl-5">
+                                            <div class="form-group d-flex align-items-center">
+                                                <div class='datetimepicker1 input-group date'>
+                                                    <input type='text' class="form-control" title="" placeholder="Thời gian từ"/>
+                                                    <span class="input-group-addon">
+                                                        <i class="zmdi zmdi-calendar"></i>
+                                                    </span>
+                                                </div>
+                                                <i class="fal fa-long-arrow-right mx-1"></i>
+                                                <div class='datetimepicker1 input-group date'>
+                                                    <input type='text' class="form-control" title="" placeholder="Thời gian đến"/>
+                                                    <span class="input-group-addon">
+                                                        <i class="zmdi zmdi-calendar"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xl-3">
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
                                             </div>
                                         </div>
                                     </div>
@@ -512,26 +518,26 @@
                                         <table class="table table-striped table-bordered table-hover nowrap">
                                             <thead>
                                             <tr>
-                                                <th>Transaction ID</th>
-                                                <th>User Name</th>
-                                                <th>User ID</th>
-                                                <th>Money</th>
-                                                <th>Status</th>
-                                                <th>Time</th>
-                                                <th>Game</th>
+                                                <th>Mã giao dịch</th>
+                                                <th>Họ tên</th>
+                                                <th>ID thành viên</th>
+                                                <th>Số tiền nạp</th>
+                                                <th>Trạng thái</th>
+                                                <th>Thời gian</th>
+                                                <th>Trò chơi</th>
                                             </tr>
                                             </thead>
                                             <tbody class="data-transactions">
                                             </tbody>
                                             <tfoot>
                                             <tr>
-                                                <th>Transaction ID</th>
-                                                <th>User Name</th>
-                                                <th>User ID</th>
-                                                <th>Money</th>
-                                                <th>Status</th>
-                                                <th>Time</th>
-                                                <th>Game</th>
+                                                <th>Mã giao dịch</th>
+                                                <th>Họ tên</th>
+                                                <th>ID thành viên</th>
+                                                <th>Số tiền nạp</th>
+                                                <th>Trạng thái</th>
+                                                <th>Thời gian</th>
+                                                <th>Trò chơi</th>
                                             </tr>
                                             </tfoot>
                                         </table>
