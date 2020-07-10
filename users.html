@@ -428,48 +428,50 @@
                                         <div class="col-sm-6 col-md-4 col-lg-5">
                                             <div class="form-group">
                                                 <select
-                                                        name="searchByGame"
+                                                        name="game"
                                                         class="select2 form-control form-control-lg"
                                                         data-placeholder="Trò chơi"
                                                 >
                                                     <option></option>
-                                                    <option value="1">Giang hồ bùm chíu</option>
-                                                    <option value="2">Đại Hiệp Piu Piu Piu</option>
-                                                    <option value="3">Hải tặc chiến</option>
+                                                    <option value="Giang hồ bùm chíu">Giang hồ bùm chíu</option>
+                                                    <option value="Đại Hiệp Piu Piu Piu">Đại Hiệp Piu Piu Piu</option>
+                                                    <option value="Hải tặc chiến">Hải tặc chiến</option>
+                                                    <option value="Oh Đại Hiệp">Oh Đại Hiệp</option>
+                                                    <option value="Mộng Huyễn Phi Tiên">Mộng Huyễn Phi Tiên</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-4 col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="ID thành viên">
+                                                <input type="text" class="form-control" name="id" placeholder="ID thành viên">
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-4 col-lg-4">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Họ tên">
+                                                <input type="text" class="form-control" name="name" placeholder="Họ tên">
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-4 col-lg-3">
                                             <div class="form-group">
                                                 <select
-                                                        name="searchByGender"
+                                                        name="gender"
                                                         class="select2-hide-search form-control form-control-lg"
                                                         data-placeholder="Giới tính"
                                                 >
                                                     <option></option>
-                                                    <option value="1">Nam</option>
-                                                    <option value="2">Nữ</option>
+                                                    <option value="Nam">Nam</option>
+                                                    <option value="Nữ">Nữ</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-4 col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Email">
+                                                <input type="text" class="form-control" name="email" placeholder="Email">
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-4 col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Số điện thoại">
+                                                <input type="text" class="form-control" name="phone" placeholder="Số điện thoại">
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-lg-3">
@@ -542,9 +544,28 @@
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <!--Get data table-->
 <script>
-    $.getJSON( "json/users.json", function( data ) {
-        let rowUser = data.users.map((animal, index, animals) => {
-            let row = '<tr>' +
+    $(function () {
+        let stringParamURL = location.search.substring(1);
+        let search = stringParamURL.length
+            ? JSON.parse('{"' + stringParamURL.replace(/&/g, '","').replace(/=/g,'":"').split('+').join(' ') + '"}', function(key, value) { return key===""?value:decodeURIComponent(value) })
+            : false;
+
+        $.getJSON( "json/users.json", function( data ) {
+            let dataFilter;
+            let dataResult = data.users;
+            if (search){
+                dataFilter = data.users.filter((animal) => {
+                    return animal.UserID === search.id
+                        || animal.Gender === search.gender
+                        || animal.UserName === search.name
+                        || animal.Game === search.game
+                        || animal.Email === search.email
+                        || animal.Phone === search.phone;
+                });
+                dataResult = dataFilter.length ? dataFilter : data.users;
+            }
+            let rowUser = dataResult.map((animal, index, animals) => {
+                let row = '<tr>' +
                     '<td>' + animal.UserID + '</td>' +
                     '<td>' + animal.UserName + '</td>' +
                     '<td>' + animal.Birthday + '</td>' +
@@ -554,15 +575,17 @@
                     '<td>' + animal.IDNumber + '</td>' +
                     '<td>' + animal.Address + '</td>' +
                     '<td>' + animal.Guardian + '</td>' +
-                '</tr>';
-            return row;
+                    '</tr>';
+                return row;
+            });
+            let rows = '';
+            for (let i = 0; i < rowUser.length; i++){
+                rows = rows.concat(rowUser[i]);
+            }
+            $('.data-user').html(rows);
         });
-        let rows = '';
-        for (let i = 0; i < rowUser.length; i++){
-            rows = rows.concat(rowUser[i]);
-        }
-        $('.data-user').html(rows);
-    });
+    })
+
 </script>
 
 <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -440,42 +440,44 @@
                                         <div class="col-md-8 col-lg-4 col-xl-3">
                                             <div class="form-group">
                                                 <select
-                                                        name="searchByGame"
+                                                        name="game"
                                                         class="select2 form-control form-control-lg"
                                                         data-placeholder="Trò chơi"
                                                 >
                                                     <option></option>
-                                                    <option value="1">Giang Hồ Bùm Chíu</option>
-                                                    <option value="2">Đại Hiệp Piu Piu Piu</option>
-                                                    <option value="3">Hải tặc chiến</option>
+                                                    <option value="Giang hồ bùm chíu">Giang hồ bùm chíu</option>
+                                                    <option value="Đại Hiệp Piu Piu Piu">Đại Hiệp Piu Piu Piu</option>
+                                                    <option value="Hải tặc chiến">Hải tặc chiến</option>
+                                                    <option value="Oh Đại Hiệp">Oh Đại Hiệp</option>
+                                                    <option value="Mộng Huyễn Phi Tiên">Mộng Huyễn Phi Tiên</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Mã Giao dịch">
+                                                <input type="text" class="form-control" name="id_transaction" placeholder="Mã Giao dịch">
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Họ tên">
+                                                <input type="text" class="form-control" name="name" placeholder="Họ tên">
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-4 col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="ID thành viên">
+                                                <input type="text" class="form-control" name="id_user" placeholder="ID thành viên">
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-md-4 col-lg-3">
                                             <div class="form-group">
                                                 <select
-                                                        name="searchByStatus"
+                                                        name="status"
                                                         class="select2-hide-search form-control form-control-lg"
                                                         data-placeholder="Trạng thái"
                                                 >
                                                     <option></option>
-                                                    <option value="1">Thành công</option>
-                                                    <option value="2">Không thành công</option>
+                                                    <option value="Thành công">Thành công</option>
+                                                    <option value="Không thành công">Không thành công</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -570,10 +572,30 @@
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <!--Get data table-->
 <script>
-    $.getJSON( "json/transactions.json", function( data ) {
-        console.log('a');
-        let rowTransaction = data.transactions.map((animal, index, animals) => {
-            let row = '<tr>' +
+    $(function () {
+        let stringParamURL = location.search.substring(1);
+        let search = stringParamURL.length
+            ? JSON.parse('{"' + stringParamURL.replace(/&/g, '","').replace(/=/g,'":"').split('+').join(' ') + '"}', function(key, value) { return key===""?value:decodeURIComponent(value) })
+            : false;
+        console.log(search);
+        $.getJSON( "json/transactions.json", function( data ) {
+            let dataFilter;
+            let dataResult = data.transactions;
+            if (search){
+                dataFilter = data.transactions.filter((animal) => {
+                    return animal.TransactionID === search.id_transaction
+                        || animal.UserID === search.id_user
+                        || animal.Gender === search.gender
+                        || animal.UserName === search.name
+                        || animal.Game === search.game;
+                });
+                console.log(dataFilter);
+                dataResult = dataFilter.length ? dataFilter : data.transactions;
+            }
+
+
+            let rowTransaction = dataResult.map((animal, index, animals) => {
+                let row = '<tr>' +
                     '<td>' + animal.TransactionID + '</td>' +
                     '<td>' + animal.UserName + '</td>' +
                     '<td>' + animal.UserID + '</td>' +
@@ -581,16 +603,18 @@
                     '<td>' + animal.Status + '</td>' +
                     '<td>' + animal.Time + '</td>' +
                     '<td>' + animal.Game + '</td>' +
-                '</tr>';
-            return row;
+                    '</tr>';
+                return row;
+            });
+            let rows = '';
+            for (let i = 0; i < rowTransaction.length; i++){
+                rows = rows.concat(rowTransaction[i]);
+            }
+            $('.data-transactions').html(rows);
         });
-        let rows = '';
-        for (let i = 0; i < rowTransaction.length; i++){
-            rows = rows.concat(rowTransaction[i]);
-        }
+    })
 
-        $('.data-transactions').html(rows);
-    });
+
 
 </script>
 

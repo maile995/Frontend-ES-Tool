@@ -5,27 +5,99 @@
       "UserName": "Bùi Đình Đài",
       "UserID": "USER01",
       "Money": "150.000VNĐ",
-      "Status": "Active",
+      "Status": "Thành công",
       "Time": "05/07/2020 15:05",
-      "Game": "Giang Hồ Bùm Chíu"
+      "Game": "Giang hồ bùm chíu"
+    },
+    {
+      "TransactionID": "T002",
+      "UserName": "Bùi Đình Đài",
+      "UserID": "USER01",
+      "Money": "200.000VNĐ",
+      "Status": "Thành công",
+      "Time": "04/07/2020 12:00",
+      "Game": "Giang hồ bùm chíu"
+    },
+    {
+      "TransactionID": "T003",
+      "UserName": "Bùi Đình Đài",
+      "UserID": "USER01",
+      "Money": "500.000VNĐ",
+      "Status": "Thành công",
+      "Time": "06/07/2020 10:00",
+      "Game": "Giang hồ bùm chíu"
+    },
+    {
+      "TransactionID": "T004",
+      "UserName": "Bùi Đình Đài",
+      "UserID": "USER01",
+      "Money": "200.000VNĐ",
+      "Status": "Thành công",
+      "Time": "04/07/2020 12:00",
+      "Game": "Giang hồ bùm chíu"
+    },
+    {
+      "TransactionID": "T005",
+      "UserName": "Nguyễn Trung Hiếu",
+      "UserID": "USER02",
+      "Money": "200.000VNĐ",
+      "Status": "Thành công",
+      "Time": "04/07/2020 12:00",
+      "Game": "Đại Hiệp Piu Piu Piu"
+    },
+    {
+      "TransactionID": "T006",
+      "UserName": "Nguyễn Trung Hiếu",
+      "UserID": "USER02",
+      "Money": "200.000VNĐ",
+      "Status": "Thành công",
+      "Time": "04/07/2020 12:00",
+      "Game": "Đại Hiệp Piu Piu Piu"
     },
     {
       "TransactionID": "T002",
       "UserName": "Nguyễn Trung Hiếu",
       "UserID": "USER02",
       "Money": "200.000VNĐ",
-      "Status": "Active",
+      "Status": "Thành công",
       "Time": "04/07/2020 12:00",
       "Game": "Đại Hiệp Piu Piu Piu"
     },
     {
-      "TransactionID": "T003",
-      "UserName": "Nguyễn Thị Loan",
-      "UserID": "USER03",
-      "Money": "500.000VNĐ",
-      "Status": "Active",
-      "Time": "06/07/2020 10:00",
+      "TransactionID": "T002",
+      "UserName": "Nguyễn Trung Hiếu",
+      "UserID": "USER02",
+      "Money": "200.000VNĐ",
+      "Status": "Thành công",
+      "Time": "04/07/2020 12:00",
       "Game": "Đại Hiệp Piu Piu Piu"
+    },
+    {
+      "TransactionID": "T002",
+      "UserName": "Đoàn Thị Linh",
+      "UserID": "USER04",
+      "Money": "200.000VNĐ",
+      "Status": "Thành công",
+      "Time": "05/07/2020 11:00",
+      "Game": "Oh Đại Hiệp"
+    },
+    {
+      "TransactionID": "T002",
+      "UserName": "Đoàn Thị Linh",
+      "UserID": "USER04",
+      "Money": "200.000VNĐ",
+      "Status": "Thành công",
+      "Time": "04/07/2020 12:00",
+      "Game": "Đại Hiệp Piu Piu Piu"
+    },
+    {
+      "TransactionID": "T002",
+      "UserName": "Đoàn Thị Linh",
+      "UserID": "USER04",
+      "Money": "350.000VNĐ",
+      "Status": "Thành công",
+      "Time": "04/07/2020 12:00",
+      "Game": "Mộng Huyễn Phi Tiên"
     }
   ]
 }

@@ -4,45 +4,121 @@
       "UserID": "USER01",
       "UserName": "Bùi Đình Đài",
       "Birthday": "05/08/1995",
-      "Gender": "Male",
+      "Gender": "Nam",
       "Email": "buidinhdai@gmail.com",
       "Phone": "0968247623",
       "IDNumber": "1634522394",
       "Address": "Đông Hưng, Thái Bình, Việt Nam",
-      "Guardian": "Bùi Đình Đạt"
+      "Guardian": "Bùi Đình Đạt",
+      "Game" : "Giang hồ bùm chíu"
     },
     {
       "UserID": "USER02",
       "UserName": "Nguyễn Trung Hiếu",
       "Birthday": "15/03/1995",
-      "Gender": "Male",
+      "Gender": "Nam",
       "Email": "nguyentrunghieu@gmail.com",
       "Phone": "0338947535",
       "IDNumber": "1553729834",
       "Address": "Kiến Xương, Thái Bình, Việt Nam",
-      "Guardian": "Nguyễn Trung Quang"
+      "Guardian": "Nguyễn Trung Quang",
+      "Game" : "Đại Hiệp Piu Piu Piu"
     },
     {
       "UserID": "USER03",
       "UserName": "Nguyễn Thị Loan",
       "Birthday": "05/05/1995",
-      "Gender": "Female",
+      "Gender": "Nữ",
       "Email": "nguyenthiloan@gmail.com",
       "Phone": "0965489753",
       "IDNumber": "1586735334",
       "Address": "Thanh Xuân, Hà Nội, Việt Nam",
-      "Guardian": "Nguyễn Thị Thanh Vân"
+      "Guardian": "Nguyễn Thị Thanh Vân",
+      "Game" : "Oh Đại Hiệp"
     },
     {
       "UserID": "USER04",
       "UserName": "Đoàn Thị Linh",
       "Birthday": "16/02/1995",
-      "Gender": "Female",
+      "Gender": "Nữ",
       "Email": "doanthilinh@gmail.com",
       "Phone": "088923865",
       "IDNumber": "1984623944",
       "Address": "Thanh Miện, Hải Dương, Việt Nam",
-      "Guardian": "Đàm Đình Đạt"
+      "Guardian": "Đàm Đình Đạt",
+      "Game" : "Mộng Huyễn Phi Tiên"
+    },
+    {
+      "UserID": "USER05",
+      "UserName": "Trần Đức Hoàn",
+      "Birthday": "13/02/1995",
+      "Gender": "Nam",
+      "Email": "tranduchoan@gmail.com",
+      "Phone": "088998475",
+      "IDNumber": "198462598",
+      "Address": "TP.Nam Định, Nam Định, Việt Nam",
+      "Guardian": "Trần Đức Bo",
+      "Game" : "Hải tặc chiến"
+    },
+    {
+      "UserID": "USER06",
+      "UserName": "Đào Quang Huy",
+      "Birthday": "16/11/1995",
+      "Gender": "Nam",
+      "Email": "daoquanghuy@gmail.com",
+      "Phone": "0843895735",
+      "IDNumber": "1946456944",
+      "Address": "Tây Hồ, Hà Nội, Việt Nam",
+      "Guardian": "Đào Quang Hải",
+      "Game" : "Giang hồ bùm chíu"
+    },
+    {
+      "UserID": "USER07",
+      "UserName": "Đào Đình Nhâm",
+      "Birthday": "20/4/1995",
+      "Gender": "Nam",
+      "Email": "saodinhnham@gmail.com",
+      "Phone": "0975638423",
+      "IDNumber": "1398448953",
+      "Address": "TP Vinh, Nghệ An, Việt Nam",
+      "Guardian": "Nguyễn Thị Lý",
+      "Game" : "Giang hồ bùm chíu"
+    },
+    {
+      "UserID": "USER08",
+      "UserName": "Nguyễn Thị Minh Hằng",
+      "Birthday": "16/6/1995",
+      "Gender": "Nữ",
+      "Email": "nguyenthiminhhang@gmail.com",
+      "Phone": "0983592347",
+      "IDNumber": "15894653609",
+      "Address": "Lục Ngạn, Bắc Giang, Việt Nam",
+      "Guardian": "Nguyễn Quang Vinh",
+      "Game" : "Hải tặc chiến"
+    },
+    {
+      "UserID": "USER09",
+      "UserName": "Trần Thị Thanh Vân",
+      "Birthday": "07/12/1995",
+      "Gender": "Nữ",
+      "Email": "tranthithanhvan@gmail.com",
+      "Phone": "0978634785",
+      "IDNumber": "17489534509",
+      "Address": "Quất Lâm, Nam Định, Việt Nam",
+      "Guardian": "Trần Quang Khải",
+      "Game" : "Oh Đại Hiệp"
+    },
+    {
+      "UserID": "USER10",
+      "UserName": "Trần Quang Việt",
+      "Birthday": "16/12/1995",
+      "Gender": "Nam",
+      "Email": "tranquangviet@gmail.com",
+      "Phone": "0748957323",
+      "IDNumber": "98342759324",
+      "Address": "Phương Mai, Hà Nội, Việt Nam",
+      "Guardian": "Nguyễn Minh Hà",
+      "Game" : "Mộng Huyễn Phi Tiên"
     }
   ]
 }
