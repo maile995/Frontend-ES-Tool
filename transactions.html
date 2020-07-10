@@ -585,7 +585,7 @@
                 dataFilter = data.transactions.filter((animal) => {
                     return animal.TransactionID === search.id_transaction
                         || animal.UserID === search.id_user
-                        || animal.Gender === search.gender
+                        || animal.Status === search.status
                         || animal.UserName === search.name
                         || animal.Game === search.game;
                 });

@@ -14,7 +14,7 @@
       "UserName": "Bùi Đình Đài",
       "UserID": "USER01",
       "Money": "200.000VNĐ",
-      "Status": "Thành công",
+      "Status": "Không thành công",
       "Time": "04/07/2020 12:00",
       "Game": "Giang hồ bùm chíu"
     },
@@ -50,7 +50,7 @@
       "UserName": "Nguyễn Trung Hiếu",
       "UserID": "USER02",
       "Money": "200.000VNĐ",
-      "Status": "Thành công",
+      "Status": "Không thành công",
       "Time": "04/07/2020 12:00",
       "Game": "Đại Hiệp Piu Piu Piu"
     },
@@ -77,7 +77,7 @@
       "UserName": "Đoàn Thị Linh",
       "UserID": "USER04",
       "Money": "200.000VNĐ",
-      "Status": "Thành công",
+      "Status": "Không thành công",
       "Time": "05/07/2020 11:00",
       "Game": "Oh Đại Hiệp"
     },
